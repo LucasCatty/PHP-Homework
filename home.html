@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMTSS Football Team - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .menu {
+            background-color: #004aad;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .menu ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        .menu ul li a:hover {
+            background-color: #0073e6;
+            border-radius: 4px;
+        }
+
+        .hero {
+            height: 70vh;
+            background: url('football-hero.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 10px 30px;
+            margin-top: 20px;
+            background-color: #0073e6;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #005bb5;
+        }
+
+        
+        .about-section {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            color: #004aad;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #333;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+    
+        .players-section {
+            padding: 40px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        .players-section h2 {
+            color: #004aad;
+            margin-bottom: 20px;
+        }
+
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .player-card {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-card h3 {
+            margin: 10px 0;
+            color: #0073e6;
+        }
+
+        .player-card p {
+            color: #555;
+        }
+
+       
+        .footer {
+            padding: 20px;
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <nav class="menu">
+        <ul>
+            <li><a href="https://worldmissionhighschool.org/">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="meetings.html">Meetings</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="hero">
+        <h1>WMTSS Football Team</h1>
+        <p>Uniting Through Sports & Building Champions</p>
+        <a href="about.html">Learn More About Us</a>
+    </div>
+
+   
+    <section class="about-section">
+        <h2>About Our Team</h2>
+        <p>
+            At WMTSS Football Team, we are dedicated to nurturing young talents and fostering a spirit of teamwork,
+            dedication, and excellence. Our team is more than just football – it's about creating strong bonds,
+            developing leadership, and inspiring greatness in every member.
+        </p>
+    </section>
+
+  
+    <section class="players-section">
+        <h2>Our Star Players</h2>
+        <div class="players-grid">
+           
+            <div class="player-card">
+                <img src="football.jpg" alt="Player 1">
+                <h3>Jimmy</h3>
+                <p>Forward</p>
+            </div>
+            <div class="player-card">
+                <img src="y.jpg" alt="Player 2">
+                <h3>Yassin</h3>
+                <p>Goalkeeper</p>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <p>&copy; 2024 WMTSS Football Team. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>
