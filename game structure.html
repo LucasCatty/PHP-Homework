@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Football Background Animation with Players</title>
+<style>
+  /* Basic reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Full-screen body */
+  body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #0b3d0b; /* Football field green */
+    perspective: 1000px;
+  }
+
+  /* Container for the animation */
+  .animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Field lines */
+  .field-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.2) 10%, transparent 10%, transparent 50%, rgba(255,255,255,0.2) 50%);
+    background-size: 100px 100px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateLines 20s linear infinite;
+  }
+
+  /* Rotating lines animation */
+  @keyframes rotateLines {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* Football */
+  .football-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 5px #000;
+    transform: translate(-50%, -50%);
+    animation: ballMovement 4s ease-in-out infinite alternate;
+  }
+
+  /* Ball movement */
+  @keyframes ballMovement {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(100px, -50px) scale(1.1); }
+  }
+
+  /* Player characters */
+  .player {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background-color: #FFD700; /* Worldmission High School sportswear color */
+    border-radius: 10px;
+    animation: movePlayer 5s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Player movement */
+  @keyframes movePlayer {
+    0% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-20px) translateX(30px); }
+    50% { transform: translateY(10px) translateX(60px); }
+    75% { transform: translateY(-15px) translateX(90px); }
+    100% { transform: translateY(0px) translateX(120px); }
+  }
+
+  /* Player positioning */
+  .player:nth-child(2) { top: 30%; left: 40%; animation-delay: 1s; }
+  .player:nth-child(3) { top: 60%; left: 20%; animation-delay: 2s; }
+  .player:nth-child(4) { top: 40%; left: 70%; animation-delay: 3s; }
+  .player:nth-child(5) { top: 70%; left: 50%; animation-delay: 4s; }
+
+  /* Arms and legs */
+  .arms {
+    width: 6px;
+    height: 20px;
+    background-color: #FFD700;
+    position: absolute;
+  }
+  .arms.left {
+    left: -8px;
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  .arms.right {
+    right: -8px;
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+  .legs {
+    width: 10px;
+    height: 20px;
+    background-color: #FFD700;
+    position: absolute;
+    bottom: 0;
+  }
+  .legs.left {
+    left: 2px;
+  }
+  .legs.right {
+    right: 2px;
+  }
+
+  /* Eyes */
+  .eye {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+  }
+
+  /* WMHS FC text */
+  .wmhs-text {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* Goal posts */
+  .goal {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: white;
+    top: 30%;
+    left: 90%; /* Position the goal on the right side */
+    transform: translate(-50%, -50%);
+  }
+  .goal-net {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: white;
+    top: 25%; /* Adjust the height of the net */
+    left: 90%; /* Align with the goal posts */
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="animation-container">
+  <!-- Rotating field lines -->
+  <div class="field-lines"></div>
+
+  <!-- Football ball -->
+  <div class="football-ball"></div>
+
+  <!-- Player characters -->
+  <div class="player">
+    <div class="arms left"></div>
+    <div class="arms right"></div>
+    <div class="legs left"></div>
+    <div class="legs right"></div>
+    <div class="eye"></div>
+    <div class="wmhs-text">WMHS FC</div>
+  </div>
+  <div class="player">
+    <div class="arms left"></div>
+    <div class="arms right"></div>
+    <div class="legs left"></div>
+    <div class="legs right"></div>
+    <div class="eye"></div>
+    <div class="wmhs-text">WMHS FC</div>
+  </div>
+  <div class="player">
+    <div class="arms left"></div>
+    <div class="arms right"></div>
+    <div class="legs left"></div>
+    <div class="legs right"></div>
+    <div class="eye"></div>
+    <div class="wmhs-text">WMHS FC</div>
+  </div>
+  <div class="player">
+    <div class="arms left"></div>
+    <div class="arms right"></div>
+    <div class="legs left"></div>
+    <div class="legs right"></div>
+    <div class="eye"></div>
+    <div class="wmhs-text">WMHS FC</div>
+  </div>
+
+  <!-- Goal posts -->
+  <div class="goal"></div>
+  <div class="goal-net"></div>
+</div>
+
+</body>
+</html>

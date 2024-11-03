@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,44 +11,36 @@
             margin: 0;
             padding: 0;
         }
-
         .menu {
             background-color: #004aad;
             padding: 10px;
             text-align: center;
         }
-
         .menu ul {
             list-style: none;
             padding-left: 0;
         }
-
         .menu ul li {
             display: inline;
             margin-right: 20px;
         }
-
         .menu ul li a {
             color: white;
             font-size: 18px;
             text-decoration: none;
         }
-
         .menu ul li a:hover {
             text-decoration: underline;
         }
-
         .contact-header {
             background: linear-gradient(135deg, #004aad, #0073e6);
             color: white;
             padding: 40px;
             text-align: center;
         }
-
         .contact-header h1 {
             font-size: 3em;
         }
-
         .contact-content {
             margin: 20px auto;
             width: 80%;
@@ -58,69 +49,59 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-
         .contact-content h2 {
             color: #004aad;
             margin-bottom: 20px;
         }
-
-        .contact-info {
-            margin-bottom: 30px;
-        }
-
         .contact-info p {
             font-size: 1.2em;
             margin-bottom: 10px;
         }
-
         .contact-info strong {
             color: #0073e6;
         }
-
-        .contact-form {
-            margin-top: 20px;
+        .contact-form label,
+        .recent-messages h3 {
+            color: #004aad;
         }
-
-        .contact-form label {
-            display: block;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
         .contact-form input,
-        .contact-form textarea {
+        .contact-form textarea,
+        .contact-form button {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1em;
         }
-
-        .contact-form textarea {
-            height: 150px;
-        }
-
         .contact-form button {
             background-color: #0073e6;
             color: white;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
         }
-
         .contact-form button:hover {
             background-color: #004aad;
         }
-
         .footer {
             text-align: center;
             padding: 20px;
             background-color: #004aad;
             color: white;
             margin-top: 40px;
+        }
+        .recent-messages {
+            margin-top: 40px;
+            background-color: #f9f9fb;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .recent-messages p {
+            font-size: 1.1em;
+            color: #333;
+        }
+        .success-message {
+            color: green;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -130,9 +111,9 @@
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="players.html">Players</a></li>
+            <li><a href="player.html">Players</a></li>
             <li><a href="meetings.html">Meetings</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="contact.html">Contacts</a></li>
         </ul>
     </nav>
 
@@ -148,9 +129,14 @@
             <p><strong>Address:</strong> World Mission, Kinyinya Gasabo, Rwanda</p>
         </div>
 
+      
+        <div id="successMessage" class="success-message" style="display:none;">
+            Thank you! Your message has been sent successfully.
+        </div>
+
         <div class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="submit_form.php" method="post">
+            <form id="contactForm">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -160,8 +146,17 @@
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="button" onclick="submitForm()">Send Message</button>
             </form>
+        </div>
+
+ 
+        <div class="recent-messages">
+            <h3>What Others Are Saying</h3>
+            <p><strong>Sarah:</strong> The team is fantastic and always supportive!</p>
+            <p><strong>John:</strong> I appreciate the quick response and professionalism!</p>
+            <p><strong>Alice:</strong> Thank you for your dedication and hard work!</p>
+            <p><strong>Michael:</strong> Excellent service and friendly staff.</p>
         </div>
     </div>
 
@@ -169,6 +164,14 @@
         <p>&copy; 2024 WMTSS Football Team. All Rights Reserved.</p>
     </div>
 
-</body>
+    <script>
+        function submitForm() {
+         
+            document.getElementById("successMessage").style.display = "block";
 
+          
+            document.getElementById("contactForm").style.display = "none";
+        }
+    </script>
+</body>
 </html>
