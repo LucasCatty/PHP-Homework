@@ -331,7 +331,7 @@
     </nav>
 
     <div class="header">
-        <img src="logob.PNG" alt="School Logo">
+        <img src="Images/logob.PNG" alt="School Logo">
         <div>
             <h1>WMTS Football Team</h1>
             <h2>Welcome to the Official Website</h2>
@@ -365,25 +365,25 @@
         </div>
 
         <div class="content">
-            <img src="football.jpg" alt="Football Team" class="football-img">
+            <img src="Images/football.jpg" alt="Football Team" class="football-img">
             <div class="staff-info">
                 <h2>Staff Members</h2>
                 <div class="staff-list">
                     <div class="staff-item">
                         <p>Rukundo Innocent - Head Master</p>
-                        <img src="master.jpg" alt="Rukondo Innocent" class="staff-img">
+                        <img src="Images/master.jpg" alt="Rukondo Innocent" class="staff-img">
                     </div>
                     <div class="staff-item">
                         <p>Theophile - Accountant</p>
-                        <img src="Theophile.jpg" alt="Theophile" class="staff-img">
+                        <img src="Images/Theophile.jpg" alt="Theophile" class="staff-img">
                     </div>
                     <div class="staff-item">
                         <p>Victor Mucyo Kalima - Dean of study</p>
-                        <img src="Dos.jpg" alt="Victor Karema" class="staff-img">
+                        <img src="Images/Dos.jpg" alt="Victor Karema" class="staff-img">
                     </div>
                     <div class="staff-item">
                         <p>Honest - Displine Master</p>
-                        <img src="DM.jpg" alt="Nsabimana Paul" class="staff-img">
+                        <img src="Images/DM.jpg" alt="Nsabimana Paul" class="staff-img">
                     </div>
                     <div class="staff-item">
                         <p>Linda Munhee-Missionary</p>
@@ -401,27 +401,27 @@
                 <div class="teachers-list">
                     <div class="teacher-item">
                         <p>Patience Ayaabare - English Teacher </p>
-                        <img src="Patience.jpg" alt="Izayasi" class="teacher-img">
+                        <img src="Images/Patience.jpg" alt="Izayasi" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>Sammy - Database Teacher</p>
-                        <img src="Samuel.jpg" alt="Mukuru" class="teacher-img">
+                        <img src="Images/Samuel.jpg" alt="Mukuru" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>Octave KAGABO- Bussines Teacher</p>
-                        <img src="Octave.jpg" alt="Mukuru" class="teacher-img">
+                        <img src="Images/Octave.jpg" alt="Mukuru" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>HARERIMANA Love - Project Analyse Teacher</p>
-                        <img src="Love.jpg" alt="Mukuru" class="teacher-img">
+                        <img src="Images/Love.jpg" alt="Mukuru" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>Furaha-Maths Teacher</p>
-                        <img src="Furaha.jpg" alt="Mukuru" class="teacher-img">
+                        <img src="Images/Furaha.jpg" alt="Mukuru" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>Urban-Window Server Teacher</p>
-                        <img src="Urbain.jpg" alt="Mukuru" class="teacher-img">
+                        <img src="Images/Urbain.jpg" alt="Mukuru" class="teacher-img">
                     </div>
                     <div class="teacher-item">
                         <p>IGIHOZO-PHYSICS Teacher</p>
@@ -434,8 +434,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <div class="rightbar">
     <h2>Announcements</h2>
